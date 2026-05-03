@@ -82,12 +82,11 @@ class Customer:
         self.is_returning = data['Is_Returning_Customer'] in ["True", True]
         self.rating = int(data['Customer_Rating'])
 
-    def __repr__(self):
-        return (
-            f"Customer(ID={self.customer_id}, Age={self.age}, Gender={self.gender}, "
-            f"City={self.city}, Returning={self.is_returning}, "
-            f"Rating={self.rating}, Amount={self.total_amount})"
-        )
+    def __str__(self) -> str:
+        return f"[{self.customer_id}] {self.city} | Age: {self.age} | Spend: €{self.total_amount:.2f}"
+
+    def __repr__(self) -> str:
+        return f"<Customer {self.customer_id}>"
 
 
 # ---------------------------------------------------------
