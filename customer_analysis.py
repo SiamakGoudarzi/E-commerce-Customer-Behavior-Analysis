@@ -42,13 +42,9 @@ def clean_data(csv_path: str) -> str:
     df["Customer_Rating"] = df["Customer_Rating"].astype(int)
     df["Total_Amount"] = df["Total_Amount"].astype(float)
 
-    # Normalize boolean values safely
-    df["Is_Returning_Customer"] = (
-        df["Is_Returning_Customer"]
-        .astype(str)
-        .str.strip()
-        .str.lower()
-        .map({"true": True, "false": False})
+   # Robust boolean conversion for sustainability
+    df["Is_Returning_Customer"] = df["Is_Returning_Customer"].apply(
+        lambda x: str(x).strip().lower() == 'true'
     )
 
     # Remove invalid values
