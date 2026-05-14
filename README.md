@@ -62,7 +62,7 @@ The project includes:
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 
 * **Customer Class** → Represents individual customers as structured objects  
 * **ChurnAnalyzer Class** → Handles data loading, filtering, and statistics  
@@ -71,7 +71,7 @@ The project includes:
 
 ---
 
-## 📁 Dataset
+## Dataset
 The dataset includes the following features:
 
 `Order_ID`, `Customer_ID`, `Age`, `Gender`, `City`, `Total_Amount`, `Is_Returning_Customer`, `Customer_Rating`
